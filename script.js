@@ -64,7 +64,7 @@ function createObject() {
     } else {
       object.style.top = `${objectTop + 5}px`;
     }
-  }, 10);
+  }, 5);
 }
 
 function startGame() {
@@ -87,5 +87,5 @@ function startGame() {
   // Continuously spawn multiple objects at staggered intervals
   setInterval(() => {
     createObject();
-  }, 500); // Spawn every 500ms (adjust for more/less frequency)
+  }, 1000); // Spawn every 500ms (adjust for more/less frequency)
 }
