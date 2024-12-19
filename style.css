@@ -1,1 +1,43 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
 
+#start {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#gameArea {
+  position: relative;
+  width: 100%;
+  height: calc(100vh);
+  height: calc(var(--vh, 1vh) * 100);
+  background: #f0f8ff;
+  overflow: hidden;
+}
+
+.ifrat {
+  position: absolute;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  background: #8b4513;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.object {
+  position: absolute;
+}
+
+#score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 24px;
+  color: #333;
+}
