@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catch the Falling Object</title>
+
+    <script>
+      <!--js-->
+      //creating a variable to maintain proper vh on mobile browsers
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
+    </script>
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        font-family: Arial, sans-serif;
+      }
+      #startGame {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      #gameArea {
+        position: relative;
+        width: 100%;
+        height: calc(100vh);
+        height: calc(var(--vh, 1vh) * 100);
+        background: #f0f8ff;
+        overflow: hidden;
+      }
+      .basket {
+        position: absolute;
+        bottom: 20px;
+        width: 100px;
+        height: 20px;
+        border: 2px solid red; /* Debugging */
+        background: #8b4513;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .object {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: #ff6347;
+        top: 0;
+      }
+      #score {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        font-size: 24px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gameArea">
+      <audio
+        id="backgroundMusic"
+        src="./videoplayback.weba"
+        preload="auto"
+      ></audio>
+      <div id="score">Score: 0</div>
+      <div class="basket" id="basket"></div>
+      <button id="startGame">Start Game</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
