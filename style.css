@@ -42,3 +42,21 @@ body {
   font-size: 24px;
   color: #333;
 }
+
+#dance1 {
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  width: 25vw;
+  height: 25vw;
+  object-fit: cover;
+}
+
+#dance2 {
+  position: fixed;
+  bottom: 25%;
+  right: 10%;
+  width: 15vw;
+  height: 25vw;
+  object-fit: cover;
+}
