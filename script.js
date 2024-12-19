@@ -71,9 +71,6 @@ function startGame() {
   //hide start button
   startButton.style.display = "none";
 
-  video1.play();
-  video2.play();
-
   const colors = ["#FBE8E7", "#F7DDDE", "#FFC4D0"];
 
   colors.forEach((color, index) => {
@@ -81,6 +78,10 @@ function startGame() {
       gameArea.style.backgroundColor = color;
     }, (index + 1) * 20000);
   });
+
+  setTimeout(() => {
+    video1.play();
+  }, 20000);
 
   // Mouse movement
   document.addEventListener("mousemove", (e) => {
