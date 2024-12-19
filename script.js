@@ -81,7 +81,13 @@ function startGame() {
 
   setTimeout(() => {
     video1.play();
-  }, 20000);
+    video1.style.display = "inline";
+  }, 69000);
+
+  setTimeout(() => {
+    video2.play();
+    video2.style.display = "inline";
+  }, 73000);
 
   // Mouse movement
   document.addEventListener("mousemove", (e) => {
