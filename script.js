@@ -6,15 +6,10 @@ const startButton = document.getElementById("start");
 
 const objects = [
   ["./objects/momos.png", 20],
-  ["./objects/momos.png", 10],
-  ["./objects/momos.png", 10],
-  ["./objects/momos.png", 10],
-  ["./objects/momos.png", 5],
-  ["./objects/momos.png", 5],
-  ["./objects/momos.png", 5],
-  ["./objects/momos.png", -5],
-  ["./objects/apple.png", -10],
-  ["./objects/cat.png", -20],
+  ["./objects/fish.png", 10],
+  ["./objects/fastfood.png", 10],
+  ["./objects/fruits.png", 10],
+  ["./objects/cat.png", 5],
 ];
 
 startButton.addEventListener("click", () => {
@@ -39,13 +34,12 @@ function moveBasket(x) {
 
 // Create a single falling object
 function createObject() {
-  let randomObject = Math.floor(Math.random() * objects.length);
+  let randomObject = objects[Math.floor(Math.random() * objects.length)];
   const object = document.createElement("img");
+  object.src = randomObject[0];
   object.classList.add("object");
   object.style.left = `${Math.random() * (gameArea.offsetWidth - 20)}px`;
   object.style.top = "0px";
-  object.style.width = "20px";
-  object.style.height = "20px";
   gameArea.appendChild(object);
 
   let fallingInterval = setInterval(() => {
@@ -59,7 +53,7 @@ function createObject() {
       objectRect.right >= basketRect.left &&
       objectRect.left <= basketRect.right
     ) {
-      score += objects[randomObject][1];
+      score += randomObject[1];
       scoreElement.textContent = `Score: ${score}`;
       object.remove();
       clearInterval(fallingInterval);
