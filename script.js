@@ -2,6 +2,8 @@ const gameArea = document.getElementById("gameArea");
 const basket = document.getElementById("ifrat");
 const scoreElement = document.getElementById("score");
 const backgroundMusic = document.getElementById("backgroundMusic");
+const video1 = document.getElementById("dance1");
+const video2 = document.getElementById("dance2");
 const startButton = document.getElementById("start");
 
 const objects = [
@@ -68,6 +70,9 @@ function createObject() {
 function startGame() {
   //hide start button
   startButton.style.display = "none";
+
+  video1.play();
+  video2.play();
 
   const colors = ["#FBE8E7", "#F7DDDE", "#FFC4D0"];
 
