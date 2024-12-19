@@ -1,14 +1,24 @@
 body {
   margin: 0;
   overflow: hidden;
-  font-family: Arial, sans-serif;
+  font-family: fantasy;
+}
+button {
+  font-family: fantasy;
+  padding: 8px 16px;
+  background-color: white;
+  border-radius: 10px;
 }
 
-#start {
+.title {
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border: 2px solid black;
+  padding: 20px 20px;
+  border-radius: 20px;
 }
 
 #gameArea {
@@ -61,4 +71,10 @@ body {
   width: 15vw;
   height: 25vw;
   object-fit: cover;
+}
+
+#final-score,
+#end-text-1,
+#end-text-2 {
+  display: none;
 }

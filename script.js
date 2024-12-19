@@ -1,9 +1,15 @@
 const gameArea = document.getElementById("gameArea");
 const basket = document.getElementById("ifrat");
 const scoreElement = document.getElementById("score");
+const finalScore = document.getElementById("final-score");
 const backgroundMusic = document.getElementById("backgroundMusic");
 const video1 = document.getElementById("dance1");
 const video2 = document.getElementById("dance2");
+
+const titleDialog = document.querySelector(".title");
+const startText = document.getElementById("start-text");
+const endText1 = document.getElementById("end-text-1");
+const endText2 = document.getElementById("end-text-2");
 const startButton = document.getElementById("start");
 
 const objects = [
@@ -55,6 +61,7 @@ function createObject() {
     ) {
       score += randomObject[1];
       scoreElement.textContent = `Score: ${score}`;
+      finalScore.textContent = `you scored ${score}`;
       object.remove();
       clearInterval(fallingInterval);
     } else if (objectTop > gameArea.offsetHeight) {
@@ -69,6 +76,8 @@ function createObject() {
 
 function startGame() {
   //hide start button
+  titleDialog.style.display = "none";
+  startText.style.display = "none";
   startButton.style.display = "none";
 
   const colors = ["#FBE8E7", "#F7DDDE", "#FFC4D0"];
@@ -88,6 +97,22 @@ function startGame() {
     video2.play();
     video2.style.display = "inline";
   }, 73000);
+
+  setTimeout(() => {
+    titleDialog.style.display = "block";
+    endText1.style.display = "block";
+  }, 77000);
+
+  setTimeout(() => {
+    video1.style.display = "none";
+    video2.style.display = "none";
+    endText2.style.display = "block";
+    clearInterval(createObjectInterval);
+  }, 80000);
+
+  setTimeout(() => {
+    finalScore.style.display = "block";
+  }, 83000);
 
   // Mouse movement
   document.addEventListener("mousemove", (e) => {
