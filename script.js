@@ -8,8 +8,8 @@ const objects = [
   ["./objects/momos.png", 20],
   ["./objects/fish.png", 10],
   ["./objects/fastfood.png", 10],
-  ["./objects/fruits.png", 10],
-  ["./objects/cat.png", 5],
+  ["./objects/fruits.png", -10],
+  ["./objects/cat.png", -10],
 ];
 
 startButton.addEventListener("click", () => {
@@ -18,8 +18,6 @@ startButton.addEventListener("click", () => {
 });
 
 let score = 0;
-
-backgroundMusic.play();
 
 // Function to move the basket
 function moveBasket(x) {
@@ -64,12 +62,20 @@ function createObject() {
     } else {
       object.style.top = `${objectTop + 5}px`;
     }
-  }, 5);
+  }, 10);
 }
 
 function startGame() {
   //hide start button
   startButton.style.display = "none";
+
+  const colors = ["#FBE8E7", "#F7DDDE", "#FFC4D0"];
+
+  colors.forEach((color, index) => {
+    setTimeout(() => {
+      gameArea.style.backgroundColor = color;
+    }, (index + 1) * 20000);
+  });
 
   // Mouse movement
   document.addEventListener("mousemove", (e) => {
@@ -85,7 +91,7 @@ function startGame() {
   });
 
   // Continuously spawn multiple objects at staggered intervals
-  setInterval(() => {
+  let createObjectInterval = setInterval(() => {
     createObject();
-  }, 1000); // Spawn every 500ms (adjust for more/less frequency)
+  }, 750); // Spawn every 500ms (adjust for more/less frequency)
 }
