@@ -1,7 +1,8 @@
+import { confetti } from "./medias/confetti.js";
+
 const gameArea = document.getElementById("gameArea");
 const basket = document.getElementById("ifrat");
 const scoreElement = document.getElementById("score");
-const finalScore = document.getElementById("final-score");
 const backgroundMusic = document.getElementById("backgroundMusic");
 const video1 = document.getElementById("dance1");
 const video2 = document.getElementById("dance2");
@@ -13,11 +14,11 @@ const endText2 = document.getElementById("end-text-2");
 const startButton = document.getElementById("start");
 
 const objects = [
-  ["./objects/momos.png", 20],
-  ["./objects/fish.png", 10],
-  ["./objects/fastfood.png", 10],
-  ["./objects/fruits.png", -10],
-  ["./objects/cat.png", -10],
+  ["./medias/objects/momos.png", 20],
+  ["./medias/objects/fish.png", 10],
+  ["./medias/objects/fastfood.png", 10],
+  ["./medias/objects/fruits.png", -10],
+  ["./medias/objects/cat.png", -10],
 ];
 
 startButton.addEventListener("click", () => {
@@ -61,7 +62,6 @@ function createObject() {
     ) {
       score += randomObject[1];
       scoreElement.textContent = `Score: ${score}`;
-      finalScore.textContent = `you scored ${score}`;
       object.remove();
       clearInterval(fallingInterval);
     } else if (objectTop > gameArea.offsetHeight) {
@@ -91,6 +91,7 @@ function startGame() {
   setTimeout(() => {
     video1.play();
     video1.style.display = "inline";
+    confetti.start();
   }, 69000);
 
   setTimeout(() => {
@@ -99,20 +100,16 @@ function startGame() {
   }, 73000);
 
   setTimeout(() => {
+    video1.style.display = "none";
+    video2.style.display = "none";
     titleDialog.style.display = "block";
     endText1.style.display = "block";
   }, 77000);
 
   setTimeout(() => {
-    video1.style.display = "none";
-    video2.style.display = "none";
     endText2.style.display = "block";
     clearInterval(createObjectInterval);
   }, 80000);
-
-  setTimeout(() => {
-    finalScore.style.display = "block";
-  }, 83000);
 
   // Mouse movement
   document.addEventListener("mousemove", (e) => {

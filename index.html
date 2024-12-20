@@ -17,34 +17,37 @@
   </head>
   <body>
     <div id="gameArea">
-      <audio id="backgroundMusic" src="./bgm.weba" preload="auto"></audio>
+      <audio
+        id="backgroundMusic"
+        src="./medias/bgm.weba"
+        preload="auto"
+      ></audio>
       <video
-        src="./videos/toothless-dance.mp4"
+        src="./medias/videos/toothless-dance.mp4"
         loop
         muted
         type="video/mp4"
         id="dance1"
       ></video>
       <video
-        src="./videos/cat-dance.mp4"
+        src="./medias/videos/cat-dance.mp4"
         loop
         muted
         type="video/mp4"
         id="dance2"
       ></video>
-      <div id="score">Score: 0</div>
-      <img src="./ifrat.png" class="ifrat" id="ifrat" />
+      <h3 id="score">Score: 0</h3>
+      <img src="./medias/ifrat.png" class="ifrat" id="ifrat" />
       <div class="title">
-        <p id="start-text">
-          Help IFRAT with the things she loves<br />
+        <h3 id="start-text">
+          Help IFRAT collect things she loves<br />
           watch out for the things she dislikes!
-        </p>
-        <p id="end-text-1">HAPPY BIRTHDAY IFRAT</p>
-        <p id="end-text-2">many many happy returns of the day</p>
-        <p id="final-score">you score 0</p>
+        </h3>
+        <h1 id="end-text-1">HAPPY BIRTHDAY IFRAT</h1>
+        <h3 id="end-text-2">many many happy returns of the day</h3>
         <button id="start" class="start-button">Start</button>
       </div>
     </div>
-    <script src="script.js"></script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>
