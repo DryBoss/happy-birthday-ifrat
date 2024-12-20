@@ -102,6 +102,7 @@ function startGame() {
   setTimeout(() => {
     video1.style.display = "none";
     video2.style.display = "none";
+    basket.style.display = "none";
     titleDialog.style.display = "block";
     endText1.style.display = "block";
   }, 77000);

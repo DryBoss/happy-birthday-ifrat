@@ -9,6 +9,7 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: "SuperShiny";
+  letter-spacing: 1px;
 }
 button {
   font-family: "SuperShiny";
@@ -41,7 +42,7 @@ button {
 
 .ifrat {
   position: absolute;
-  bottom: 20px;
+  bottom: 50px;
   width: 50px;
   height: 70px;
   left: 50%;
@@ -64,10 +65,10 @@ button {
 
 #dance1 {
   position: fixed;
-  top: 10%;
-  left: 10%;
-  width: 40vw;
-  height: 40vw;
+  top: 20%;
+  left: 20%;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   display: none;
 }
@@ -76,9 +77,9 @@ button {
   display: none;
   position: fixed;
   bottom: 25%;
-  right: 10%;
-  width: 30vw;
-  height: 40vw;
+  right: 20%;
+  width: 80px;
+  height: 120px;
   object-fit: cover;
 }
 
