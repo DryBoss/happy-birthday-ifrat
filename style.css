@@ -21,6 +21,10 @@ button {
 }
 
 .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #fcf5ee;
   text-align: center;
   position: absolute;
@@ -87,7 +91,7 @@ video {
   right: 10%;
 }
 
-#final-score,
+#cake,
 #end-text-1,
 #end-text-2,
 #end-text-3 {

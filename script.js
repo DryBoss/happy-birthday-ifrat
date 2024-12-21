@@ -11,6 +11,7 @@ const video4 = document.getElementById("dance4");
 
 const titleDialog = document.querySelector(".title");
 const startText = document.getElementById("start-text");
+const cakeIcon = document.getElementById("cake");
 const endText1 = document.getElementById("end-text-1");
 const endText2 = document.getElementById("end-text-2");
 const endText3 = document.getElementById("end-text-3");
@@ -125,6 +126,7 @@ function startGame() {
     basket.style.display = "none";
     confetti.start();
     titleDialog.style.display = "block";
+    cakeIcon.style.display = "block";
     endText1.style.display = "block";
   }, 77000);
 
