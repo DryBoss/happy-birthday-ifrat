@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="icon" type="image/png" href="./medias/ifrat.png" />
     <title>Happy Birthday Ifrat</title>
 
     <!--js-->
@@ -14,6 +16,13 @@
 
     <!--css-->
     <link rel="stylesheet" href="./style.css" />
+
+    <!--preloads-->
+    <link rel="preload" as="image" href="./medias/objects/cat.png" />
+    <link rel="preload" as="image" href="./medias/objects/fruits.png" />
+    <link rel="preload" as="image" href="./medias/objects/fastfood.png" />
+    <link rel="preload" as="image" href="./medias/objects/fish.png" />
+    <link rel="preload" as="image" href="./medias/objects/momos.png" />
   </head>
   <body>
     <div id="gameArea">
@@ -46,15 +55,16 @@
         type="video/mp4"
         id="dance4"
       ></video>
-      <h3 id="score">Score: 0</h3>
+      <h3 id="score" style="margin: 0">Score: 0</h3>
       <img src="./medias/ifrat.png" class="ifrat" id="ifrat" />
       <div class="title">
-        <h3 id="start-text">
-          Help IFRAT collect things she loves<br />
-          watch out for the things she dislikes!
+        <h3 id="start-text" style="text-align: left">
+          <li>help IFRAT collect things she loves</li>
+          <li>watch out for the things she dislikes!</li>
         </h3>
-        <h1 id="end-text-1">HAPPY BIRTHDAY IFRAT</h1>
+        <h2 id="end-text-1">HAPPY BIRTHDAY IFRAT</h2>
         <h3 id="end-text-2">many many happy returns of the day</h3>
+        <h3 id="end-text-3">love who you are</h3>
         <button id="start" class="start-button">Start</button>
       </div>
     </div>

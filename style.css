@@ -9,7 +9,7 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: "SuperShiny";
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 button {
   font-family: "SuperShiny";
@@ -36,7 +36,7 @@ button {
   width: 100%;
   height: calc(100vh);
   height: calc(var(--vh, 1vh) * 100);
-  background: #fcf5ee;
+  background: #ffe5ec;
   overflow: hidden;
 }
 
@@ -88,6 +88,7 @@ video {
 
 #final-score,
 #end-text-1,
-#end-text-2 {
+#end-text-2,
+#end-text-3 {
   display: none;
 }

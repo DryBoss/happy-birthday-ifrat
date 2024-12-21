@@ -13,6 +13,7 @@ const titleDialog = document.querySelector(".title");
 const startText = document.getElementById("start-text");
 const endText1 = document.getElementById("end-text-1");
 const endText2 = document.getElementById("end-text-2");
+const endText3 = document.getElementById("end-text-3");
 const startButton = document.getElementById("start");
 
 const objects = [
@@ -82,12 +83,17 @@ function startGame() {
   startText.style.display = "none";
   startButton.style.display = "none";
 
-  const colors = ["#FBE8E7", "#F7DDDE", "#FFC4D0"];
+  const colors = [
+    ["#ffc2d1", 18000],
+    ["#ffb3c6", 34000],
+    ["#ff8fab", 52000],
+    ["#fb6f92", 69000],
+  ];
 
-  colors.forEach((color, index) => {
+  colors.forEach((color) => {
     setTimeout(() => {
-      gameArea.style.backgroundColor = color;
-    }, (index + 1) * 20000);
+      gameArea.style.backgroundColor = color[0];
+    }, color[1]);
   });
 
   setTimeout(() => {
@@ -111,10 +117,6 @@ function startGame() {
   }, 75000);
 
   setTimeout(() => {
-    //video1.style.display = "none";
-    //video2.style.display = "none";
-    //video3.style.display = "none";
-    //video4.style.display = "none";
     basket.style.display = "none";
     confetti.start();
     titleDialog.style.display = "block";
@@ -125,6 +127,10 @@ function startGame() {
     endText2.style.display = "block";
     clearInterval(createObjectInterval);
   }, 80000);
+
+  setTimeout(() => {
+    endText3.style.display = "block";
+  }, 83000);
 
   // Mouse movement
   document.addEventListener("mousemove", (e) => {
