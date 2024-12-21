@@ -63,24 +63,27 @@ button {
   color: #333;
 }
 
-#dance1 {
+video {
   position: fixed;
-  top: 20%;
-  left: 20%;
-  width: 120px;
-  height: 120px;
-  object-fit: cover;
+  width: 144px;
+  height: 144px;
   display: none;
 }
-
+#dance1 {
+  top: 20%;
+  left: 20%;
+}
 #dance2 {
-  display: none;
-  position: fixed;
   top: 20%;
   right: 20%;
-  width: 80px;
-  height: 120px;
-  object-fit: cover;
+}
+#dance3 {
+  top: calc(20% + 164px);
+  left: 20%;
+}
+#dance4 {
+  top: calc(20% + 164px);
+  right: 20%;
 }
 
 #final-score,

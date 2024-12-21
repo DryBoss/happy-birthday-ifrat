@@ -6,6 +6,8 @@ const scoreElement = document.getElementById("score");
 const backgroundMusic = document.getElementById("backgroundMusic");
 const video1 = document.getElementById("dance1");
 const video2 = document.getElementById("dance2");
+const video3 = document.getElementById("dance3");
+const video4 = document.getElementById("dance4");
 
 const titleDialog = document.querySelector(".title");
 const startText = document.getElementById("start-text");
@@ -96,11 +98,23 @@ function startGame() {
   setTimeout(() => {
     video2.play();
     video2.style.display = "inline";
+  }, 71000);
+
+  setTimeout(() => {
+    video3.play();
+    video3.style.display = "inline";
   }, 73000);
 
   setTimeout(() => {
-    video1.style.display = "none";
-    video2.style.display = "none";
+    video4.play();
+    video4.style.display = "inline";
+  }, 75000);
+
+  setTimeout(() => {
+    //video1.style.display = "none";
+    //video2.style.display = "none";
+    //video3.style.display = "none";
+    //video4.style.display = "none";
     basket.style.display = "none";
     confetti.start();
     titleDialog.style.display = "block";
