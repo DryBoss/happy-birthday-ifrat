@@ -70,20 +70,20 @@ video {
   display: none;
 }
 #dance1 {
-  top: 20%;
-  left: 20%;
+  top: 10%;
+  left: 10%;
 }
 #dance2 {
-  top: 20%;
-  right: 20%;
+  top: 10%;
+  right: 10%;
 }
 #dance3 {
-  top: calc(20% + 164px);
-  left: 20%;
+  bottom: calc(10%);
+  left: 10%;
 }
 #dance4 {
-  top: calc(20% + 164px);
-  right: 20%;
+  bottom: calc(10%);
+  right: 10%;
 }
 
 #final-score,
