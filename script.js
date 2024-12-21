@@ -24,6 +24,11 @@ const objects = [
   ["./medias/objects/cat.png", -10],
 ];
 
+objects.forEach((object) => {
+  const img = new Image();
+  img.src = object[1];
+});
+
 startButton.addEventListener("click", () => {
   backgroundMusic.play();
   startGame();

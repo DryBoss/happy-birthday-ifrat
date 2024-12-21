@@ -9,7 +9,8 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: "SuperShiny";
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
+  line-height: 24px;
 }
 button {
   font-family: "SuperShiny";
