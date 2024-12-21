@@ -91,7 +91,6 @@ function startGame() {
   setTimeout(() => {
     video1.play();
     video1.style.display = "inline";
-    confetti.start();
   }, 69000);
 
   setTimeout(() => {
@@ -103,6 +102,7 @@ function startGame() {
     video1.style.display = "none";
     video2.style.display = "none";
     basket.style.display = "none";
+    confetti.start();
     titleDialog.style.display = "block";
     endText1.style.display = "block";
   }, 77000);
