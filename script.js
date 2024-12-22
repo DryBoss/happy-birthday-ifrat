@@ -116,7 +116,7 @@ function startGame() {
 
   setInterval(() => {
     time > 0 ? (time -= 1) : (timerElement.style.display = "none");
-    timerElement.innerHTML = `Party starts in <br> ${time} seconds`;
+    timerElement.innerHTML = `Party starts in<br>${time} seconds`;
   }, 1000);
 
   setTimeout(() => {
