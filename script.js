@@ -5,6 +5,7 @@ const loading = document.getElementById("loading");
 const gameArea = document.getElementById("gameArea");
 const basket = document.getElementById("ifrat");
 const scoreElement = document.getElementById("score");
+const timerElement = document.getElementById("timer");
 const backgroundMusic = document.getElementById("backgroundMusic");
 const video1 = document.getElementById("dance1");
 const video2 = document.getElementById("dance2");
@@ -18,6 +19,8 @@ const endText1 = document.getElementById("end-text-1");
 const endText2 = document.getElementById("end-text-2");
 const endText3 = document.getElementById("end-text-3");
 const startButton = document.getElementById("start");
+
+let time = 68;
 
 document.addEventListener("DOMContentLoaded", () => {
   loading.style.display = "none";
@@ -91,6 +94,8 @@ function createObject() {
 }
 
 function startGame() {
+  scoreElement.style.display = "inline";
+  timerElement.style.display = "inline";
   //hide start button
   titleDialog.style.display = "none";
   startText.style.display = "none";
@@ -108,6 +113,11 @@ function startGame() {
       gameArea.style.backgroundColor = color[0];
     }, color[1]);
   });
+
+  setInterval(() => {
+    time > 0 ? (time -= 1) : (timerElement.style.display = "none");
+    timerElement.innerHTML = `Party starts in <br> ${time} seconds`;
+  }, 1000);
 
   setTimeout(() => {
     video1.play();
