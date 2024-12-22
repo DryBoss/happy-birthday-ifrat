@@ -1,7 +1,7 @@
 export const balloonAnimation = {
   balloons: [],
   animationFrame: null,
-  maxBalloons: 8,
+  maxBalloons: 5,
   speed: 1.5,
   isRunning: false,
 
