@@ -1,4 +1,5 @@
 import { confetti } from "./medias/confetti.js";
+import { balloonAnimation } from "./medias/balloon.js";
 
 const gameArea = document.getElementById("gameArea");
 const basket = document.getElementById("ifrat");
@@ -125,7 +126,7 @@ function startGame() {
   setTimeout(() => {
     basket.style.display = "none";
     confetti.start();
-    titleDialog.style.display = "block";
+    titleDialog.style.display = "flex";
     cakeIcon.style.display = "block";
     endText1.style.display = "block";
   }, 77000);
@@ -136,7 +137,7 @@ function startGame() {
   }, 80000);
 
   setTimeout(() => {
-    endText3.style.display = "block";
+    balloonAnimation.start();
   }, 83000);
 
   // Mouse movement
