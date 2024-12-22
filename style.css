@@ -35,7 +35,18 @@ button {
   border-radius: 20px;
 }
 
+#loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  background: #ffe5ec;
+}
+
 #gameArea {
+  display: none;
   position: relative;
   width: 100%;
   height: calc(100vh);

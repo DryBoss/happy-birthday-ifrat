@@ -1,6 +1,7 @@
 import { confetti } from "./medias/confetti.js";
 import { balloonAnimation } from "./medias/balloon.js";
 
+const loading = document.getElementById("loading");
 const gameArea = document.getElementById("gameArea");
 const basket = document.getElementById("ifrat");
 const scoreElement = document.getElementById("score");
@@ -18,6 +19,11 @@ const endText2 = document.getElementById("end-text-2");
 const endText3 = document.getElementById("end-text-3");
 const startButton = document.getElementById("start");
 
+document.addEventListener("DOMContentLoaded", () => {
+  loading.style.display = "none";
+  gameArea.style.display = "block";
+});
+
 const objects = [
   ["./medias/objects/momos.png", 20],
   ["./medias/objects/fish.png", 10],
@@ -28,7 +34,7 @@ const objects = [
 
 objects.forEach((object) => {
   const img = new Image();
-  img.src = object[1];
+  img.src = object[0];
 });
 
 startButton.addEventListener("click", () => {
