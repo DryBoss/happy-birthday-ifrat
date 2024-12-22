@@ -107,10 +107,23 @@ export const balloonAnimation = {
     ctx.translate(balloon.x, balloon.y); // Move origin to balloon center
     ctx.scale(1, 1.5); // Stretch vertically by 1.5x
 
-    // Draw the balloon body
+    // Create a radial gradient for solid light reflection (top right)
+    const gradient = ctx.createRadialGradient(
+      balloon.size / 3,
+      -balloon.size / 3,
+      0,
+      balloon.size / 3,
+      -balloon.size / 3,
+      balloon.size / 2
+    );
+    gradient.addColorStop(0, "white"); // Solid white reflection at the top right
+    gradient.addColorStop(0.3, "white"); // Solid white fading a little
+    gradient.addColorStop(1, balloon.color); // Balloon color at the outer edges
+
+    // Draw the balloon body with gradient for reflection effect
     ctx.beginPath();
-    ctx.arc(0, 0, balloon.size, 0, Math.PI * 2);
-    ctx.fillStyle = balloon.color;
+    ctx.arc(0, 0, balloon.size, 0, Math.PI * 2); // Balloon shape (circle)
+    ctx.fillStyle = gradient; // Use the gradient as the fill style
     ctx.fill();
 
     // Draw the outline of the balloon
@@ -118,13 +131,13 @@ export const balloonAnimation = {
     ctx.strokeStyle = "black"; // Set the outline color
     ctx.stroke(); // Draw the outline
 
-    // Restore canvas state
+    // Restore canvas state to prevent the scale from affecting other objects
     ctx.restore();
 
-    // Draw the string
+    // Draw the string of the balloon
     ctx.beginPath();
-    ctx.moveTo(balloon.x, balloon.y + balloon.size * 1.5);
-    ctx.lineTo(balloon.x, balloon.y + balloon.size * 1.5 + 100);
+    ctx.moveTo(balloon.x, balloon.y + balloon.size * 1.5); // Move to the bottom of the balloon
+    ctx.lineTo(balloon.x, balloon.y + balloon.size * 1.5 + 100); // Draw the string
     ctx.strokeStyle = "black";
     ctx.lineWidth = 2;
     ctx.stroke();
