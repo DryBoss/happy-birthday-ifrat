@@ -153,6 +153,7 @@ function startGame() {
   }, 80000);
 
   setTimeout(() => {
+    endText3.style.display = "block";
     balloonAnimation.start();
   }, 83000);
 
