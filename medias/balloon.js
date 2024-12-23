@@ -47,7 +47,11 @@ export const balloonAnimation = {
           this.drawBalloon(ctx, balloon);
 
           // Respawn balloon if it moves off screen and if the animation is still running
-          if (balloon.y + balloon.size < 0 && this.isRunning) {
+          if (
+            balloon.y + balloon.size + balloon.y + balloon.size * 1.5 + 250 <
+              0 &&
+            this.isRunning
+          ) {
             this.balloons[index] = this.createBalloon(canvas, true);
           }
         });
@@ -79,7 +83,7 @@ export const balloonAnimation = {
     // Spawning outside the visible canvas area (above or below the screen)
     return {
       x: Math.random() * canvas.width,
-      y: respawn ? canvas.height + size : Math.random() * -size - size, // Ensure balloon starts above or below the screen
+      y: respawn ? canvas.height + size + 50 : Math.random() * -size - size, // Ensure balloon starts above or below the screen
       size,
       color: this.randomColor(),
       speed: this.speed + Math.random(),

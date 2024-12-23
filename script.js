@@ -19,7 +19,7 @@ const endText1 = document.getElementById("end-text-1");
 const endText2 = document.getElementById("end-text-2");
 const endText3 = document.getElementById("end-text-3");
 const startButton = document.getElementById("start");
-
+balloonAnimation.start();
 let time = 68;
 
 document.addEventListener("DOMContentLoaded", () => {
