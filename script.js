@@ -3,6 +3,7 @@ import { balloonAnimation } from "./medias/balloon.js";
 
 const loading = document.getElementById("loading");
 const gameArea = document.getElementById("gameArea");
+const peekingIfrat = document.getElementById("peeking-ifrat");
 const basket = document.getElementById("ifrat");
 const scoreElement = document.getElementById("score");
 const timerElement = document.getElementById("timer");
@@ -19,7 +20,7 @@ const endText1 = document.getElementById("end-text-1");
 const endText2 = document.getElementById("end-text-2");
 const endText3 = document.getElementById("end-text-3");
 const startButton = document.getElementById("start");
-balloonAnimation.start();
+
 let time = 68;
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -156,6 +157,10 @@ function startGame() {
     endText3.style.display = "block";
     balloonAnimation.start();
   }, 83000);
+
+  setTimeout(() => {
+    peekingIfrat.style.transform = "translateX(0px)";
+  }, 86000);
 
   // Mouse movement
   document.addEventListener("mousemove", (e) => {

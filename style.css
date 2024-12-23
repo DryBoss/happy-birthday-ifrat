@@ -69,6 +69,15 @@ button {
   transform: translateX(-50%);
 }
 
+#peeking-ifrat {
+  position: fixed;
+  rotate: -45deg;
+  bottom: 25%;
+  right: 0;
+  transform: translateX(100px);
+  transition: 250ms;
+}
+
 .object {
   position: absolute;
   width: 40px;
