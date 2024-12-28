@@ -83,7 +83,9 @@ export const balloonAnimation = {
     // Spawning outside the visible canvas area (above or below the screen)
     return {
       x: Math.random() * canvas.width,
-      y: respawn ? canvas.height + size + 10 : Math.random() * -size - size, // Ensure balloon starts above or below the screen
+      y: respawn
+        ? canvas.height + size + 10
+        : Math.random() * -size - (size + 100), // Ensure balloon starts above or below the screen
       size,
       color: this.randomColor(),
       speed: this.speed + Math.random(),
