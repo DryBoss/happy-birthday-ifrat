@@ -32,7 +32,7 @@ const objects = [
   ["./medias/objects/momos.png", 20],
   ["./medias/objects/noodles.png", 20],
   ["./medias/objects/fish.png", 10],
-  ["./medias/objects/biriyani.png", 10],
+  ["./medias/objects/biryani.png", 10],
   ["./medias/objects/pizza.png", 10],
   ["./medias/objects/shawarma.png", 10],
   ["./medias/objects/apple.png", -10],
