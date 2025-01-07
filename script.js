@@ -35,10 +35,10 @@ const objects = [
   ["./medias/objects/biryani.png", 10],
   ["./medias/objects/pizza.png", 10],
   ["./medias/objects/shawarma.png", 10],
-  ["./medias/objects/apple.png", -10],
-  ["./medias/objects/dragonfruit.png", -10],
-  ["./medias/objects/grapes.png", -10],
-  ["./medias/objects/pomegranate.png", -10],
+  ["./medias/objects/apple.png", -5],
+  ["./medias/objects/dragonfruit.png", -5],
+  ["./medias/objects/grapes.png", -5],
+  ["./medias/objects/pomegranate.png", -5],
 ];
 
 objects.forEach((object) => {
