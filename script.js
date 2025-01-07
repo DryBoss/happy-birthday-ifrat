@@ -30,10 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const objects = [
   ["./medias/objects/momos.png", 20],
+  ["./medias/objects/fastfood.png", 20],
   ["./medias/objects/fish.png", 10],
-  ["./medias/objects/fastfood.png", 10],
-  ["./medias/objects/fruits.png", -10],
-  ["./medias/objects/cat.png", -10],
+  ["./medias/objects/drama.png", 10],
+  ["./medias/objects/noodles.png", 10],
+  ["./medias/objects/lipstick.png", 10],
+  ["./medias/objects/fruits.png", -20],
+  ["./medias/objects/cat.png", -20],
 ];
 
 objects.forEach((object) => {
