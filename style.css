@@ -15,6 +15,14 @@ h3 {
   font-weight: normal;
   margin: 0;
 }
+h4 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.3;
+  font-size: 2rem;
+}
 button {
   font-family: "SuperShiny";
   font-size: 2rem;

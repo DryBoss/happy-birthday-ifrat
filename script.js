@@ -5,6 +5,7 @@ const loading = document.getElementById("loading");
 const gameArea = document.getElementById("gameArea");
 const peekingIfrat = document.getElementById("peeking-ifrat");
 const basket = document.getElementById("ifrat");
+const reaction = document.getElementById("reaction");
 const scoreElement = document.getElementById("score");
 const timerElement = document.getElementById("timer");
 const backgroundMusic = document.getElementById("backgroundMusic");
@@ -86,6 +87,10 @@ function createObject() {
       objectRect.left <= basketRect.right
     ) {
       score += randomObject[1];
+      reaction.textContent = randomObject[1] > 0 ? "YUMMY!" : "EWW!";
+      setTimeout(() => {
+        reaction.textContent = "";
+      }, 500);
       scoreElement.textContent = `Score: ${score}`;
       object.remove();
       clearInterval(fallingInterval);
@@ -151,17 +156,17 @@ function startGame() {
     titleDialog.style.display = "flex";
     cakeIcon.style.display = "block";
     endText1.style.display = "block";
-  }, 77000);
+  }, 76500);
 
   setTimeout(() => {
     endText2.style.display = "block";
     clearInterval(createObjectInterval);
-  }, 80000);
+  }, 80500);
 
   setTimeout(() => {
     endText3.style.display = "block";
     balloonAnimation.start();
-  }, 83000);
+  }, 82500);
 
   setTimeout(() => {
     peekingIfrat.style.transform = "translateX(0px)";
