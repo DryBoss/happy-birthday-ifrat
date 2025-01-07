@@ -156,17 +156,17 @@ function startGame() {
     titleDialog.style.display = "flex";
     cakeIcon.style.display = "block";
     endText1.style.display = "block";
-  }, 76500);
+  }, 77000);
 
   setTimeout(() => {
     endText2.style.display = "block";
     clearInterval(createObjectInterval);
-  }, 80500);
+  }, 80000);
 
   setTimeout(() => {
     endText3.style.display = "block";
     balloonAnimation.start();
-  }, 82500);
+  }, 83000);
 
   setTimeout(() => {
     peekingIfrat.style.transform = "translateX(0px)";
