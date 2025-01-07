@@ -30,13 +30,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const objects = [
   ["./medias/objects/momos.png", 20],
-  ["./medias/objects/fastfood.png", 20],
+  ["./medias/objects/noodles.png", 20],
   ["./medias/objects/fish.png", 10],
-  ["./medias/objects/drama.png", 10],
-  ["./medias/objects/noodles.png", 10],
-  ["./medias/objects/lipstick.png", 10],
-  ["./medias/objects/fruits.png", -20],
-  ["./medias/objects/cat.png", -20],
+  ["./medias/objects/biriyani.png", 10],
+  ["./medias/objects/pizza.png", 10],
+  ["./medias/objects/shawarma.png", 10],
+  ["./medias/objects/apple.png", -10],
+  ["./medias/objects/dragonfruit.png", -10],
+  ["./medias/objects/grapes.png", -10],
+  ["./medias/objects/pomegranate.png", -10],
 ];
 
 objects.forEach((object) => {
